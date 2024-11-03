@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staybnb - Travel Outside</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            text-decoration: none;
+            color: white;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        li {
+            margin: 0 15px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        a:hover, .active {
+            text-decoration: underline;
+        }
+        .register-btn {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .register-btn:hover {
+            background-color: #e68900;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .travel-info {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Staybnb</a>
+            <ul>
+                <li><a href="popularplaces.html">Popular Places</a></li>
+                <li><a href="traveloutside.html" class="active">Travel Outside</a></li>
+                <li><a href="onlinepackage.html">Online Package</a></li>
+            </ul>
+            <button class="register-btn" onclick="register()">Register now</button>
+        </nav>
+    </header>
+    <main>
+        <h1>Travel Outside</h1>
+        <p>Plan your next adventure and travel beyond boundaries.</p>
+        <div class="travel-info">
+            <h2>Explore Amazing Destinations</h2>
+            <p>Discover beautiful places around the world, from stunning beaches to majestic mountains.</p>
+        </div>
+    </main>
+    <script>
+        function register() {
+            alert("Registration feature is coming soon!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staybnb - Popular Places</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins::ital,wght@0,600;0,700;1,400&display=swap');
+       /* *{
+    font-family:'poppins' ,sans-serif;
+    margin:0;
+    padding:0;
+    scroll-behavior:smooth;
+    scroll-padding-top: 2rem;
+    box-sizing:border-box;
+}*/
+
+
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            scroll-behavior:smooth;
+            scroll-padding-top: 2rem;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            text-decoration: none;
+            color: white;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        li {
+            margin: 0 15px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        a:hover, .active {
+            text-decoration: underline;
+        }
+        .register-btn {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .register-btn:hover {
+            background-color: #e68900;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .popular-places {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .place {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+        }
+        .post{
+   display:grid;
+   grid-template-columns: repeat(auto-fit,minmax(400px,auto));
+   /*flex-direction:column;*/
+   justify-content: center;
+   gap:2.5rem;
+
+}
+
+.post-box{
+    background:var(--bg-color) ;
+    box-shadow: 0 4px 14px hsl(35deg 25% 15% /10%);
+    padding:15px;
+    border-radius: 0.5rem;
+    margin:5px;
+    transition: transform 0.3s ease-in-out;
+}
+.post-box:hover{
+    transform: scale(1.1);
+}
+.post-img{
+    width:100%;
+    height: 200px;
+    object-fit: cover;
+    object-position:center ;
+    border-radius: 0.5rem;
+}
+
+.category{
+    font-size:0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color:var(--second--color);
+}
+
+.post-title{
+    font-size:1.3rem;
+    font-weight: 600;
+    color:var(--text-color);
+    display: --webkit-box;
+    --webkit-line-clamb:2;
+    --webkit-box-orinent:vertical;
+    overflow:hidden;
+}
+
+.post-date{
+    display:flex;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    margin-top: 4px;
+    font-weight: 400;
+}
+
+.post-description{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin: 5px 0 10px;
+    display: --webkit-box;
+    --webkit-line-clamb:2;
+    --webkit-box-orinent:vertical;
+    overflow: hidden;
+
+}
+
+.profile{
+    display:flex;
+    align-items: center;
+    gap:10px;
+
+}
+
+/*.profile.img{
+    width: 35px;
+    height:35px;
+    border-radius: 50%;
+    object-fit:cover;
+    object-position: center;
+    border:2px solid var(--second--color);
+}*/
+
+.profile-name{
+    font-size:.8rem;
+    font-weight:500 ;
+}  
+@media (max-width: 768px){
+    post-header{
+        height: 435px;
+    }
+
+    .post-header{
+        margin-top: 9rem ;
+    }
+}
+@media (max-width: 570px){
+    .post-header{
+        height: 390px;
+    }
+
+    .header-title{
+        width: 100%;
+    }
+
+    .header-img{
+        height:340px;
+    }
+}
+
+@media (max-width:1060px) {
+    .container{
+        margin: 0 auto;
+        width:95%;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Staybnb</a>
+            <ul>
+                <li><a href="popularplaces.html" class="active">Popular Places</a></li>
+                <li><a href="traveloutside.html">Travel Outside</a></li>
+                <li><a href="onlinepackage.html">Online Package</a></li>
+            </ul>
+            <button class="register-btn" onclick="register()">Register now</button>
+        </nav>
+    </header>
+    <main>
+        <h1>Popular Places</h1>
+        <p><h2>Explore the most popular destinations around the world!</h2></p>
+       <!------<div class="popular-places">
+            <div class="place">1. Paris, France</div>
+            <div class="place">2. New York City, USA</div>
+            <div class="place">3. Tokyo, Japan</div>
+            <div class="place">4. Rome, Italy</div>
+            <div class="place">5. Seoul, Korea</div>
+        </div>------->
+        <!-------- post 1---------->
+        <div class="post contaniner">
+            <div class="post-box paris">
+              <img src="images/paris.png"      alt=""  class="post-img">
+              <h2 class="category">Paris,France</h2>
+              <a href="#" class="post-title">EIFEL TOWER</a>
+              <span class="post-date">06 nov 2024</span>
+              <p class="post-descripition"><b>The Eiffel Tower (/ˈaɪfəl/ ⓘ EYE-fəl; French: Tour Eiffel [tuʁ ɛfɛl] ⓘ) is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower from 1887 to 1889.
+
+                Locally nicknamed "La dame de fer" (French for "Iron Lady"), it was constructed as the centerpiece of the 1889 World's Fair, and to crown the centennial anniversary of the French Revolution. Although initially criticised by some of France's leading artists and intellectuals for its design, it has since become a global cultural icon of France and one of the most recognisable structures in the world.[5] The tower received 5,889,000 visitors in 2022.[6] The Eiffel Tower is the most visited monument with an entrance fee in the world:[7] 6.91 million people ascended it in 2015. It was designated a monument historique in 1964, and was named part of a UNESCO World Heritage Site ("Paris, Banks of the Seine") in 1991.the height of the tower is 330mts.</b><br> </p>
+              <div class="profile">
+              <span  class="profile-name">Paris</span>
+              </div>
+             </div>
+                          <!------post2-------->
+             <div class="post-box paris">
+                <img src="images/louvre.jpeg"      alt=""  class="post-img">
+                <h2 class="category">Paris,France</h2>
+                <a href="#" class="post-title">LOUVRE MUSEUM</a>
+                <span class="post-date">06 nov 2024</span>
+                <p class="post-descripition"><b>The Louvre  or the Louvre Museum (French: Musée du Louvre [myze dy luvʁ] ⓘ), is a national art museum in Paris, France, and one of the most famous museums in the world. It is located on the Right Bank of the Seine in the city's 1st arrondissement (district or ward) and home to some of the most canonical works of Western art, including the Mona Lisa, Venus de Milo, and Winged Victory. The museum is housed in the Louvre Palace, originally built in the late 12th to 13th century under Philip II. Remnants of the Medieval Louvre fortress are visible in the basement of the museum. Due to urban expansion, the fortress eventually lost its defensive function, and in 1546 Francis I converted it into the primary residence of the French kings.#special part is that "MONA LISA"painting is present in the museum<br></b> </p>
+                <div class="profile">
+                <span  class="profile-name">Paris</span>
+                </div>
+               </div>
+               <!------post3-------->
+               <div class="post-box paris">
+                <img src="images/notre.jpg"      alt=""  class="post-img">
+                <h2 class="category">Paris,France</h2>
+                <a href="#" class="post-title">CATHEDRALE NOTRE-DAME DE PARIS</a>
+                <span class="post-date">06 nov 2024</span>
+                <p class="post-descripition"><b>Notre-Dame de Paris (French: [nɔtʁ(ə) dam də paʁi] ⓘ; meaning "Our Lady of Paris"), often referred to simply as Notre-Dame,[a] is a medieval Catholic cathedral on the Île de la Cité (an island in the River Seine), in the 4th arrondissement of Paris, France. The cathedral, dedicated in honour of the Virgin Mary (Our Lady), is considered one of the finest examples of French Gothic architecture. Several attributes set it apart from the earlier Romanesque style, particularly its pioneering use of the rib vault and flying buttress, its enormous and colourful rose windows, and the naturalism and abundance of its sculptural decoration.[6] Notre-Dame also stands out for its three pipe organs (one historic) and its immense church bells.<br></b> </p>
+                <div class="profile">
+                <span  class="profile-name">Paris</span>
+                </div>
+               </div>
+               <!---------post4---------->
+               <div class="post-box paris">
+                <img src="images/montmartre.jpg"      alt=""  class="post-img">
+                <h2 class="category">Paris,France</h2>
+                <a href="#" class="post-title">MONTMARTRE AND THE BASILICA OF SACRE-COEUR</a>
+                <span class="post-date">06 nov 2024</span>
+                <p class="post-descripition"><b>The Basilica of Sacré Cœur de Montmartre , commonly known as Sacré-Cœur Basilica and often simply Sacré-Cœur (French: Sacré-Cœur de Montmartre, pronounced [sakʁe kœʁ]), is a Catholic church and minor basilica in Paris dedicated to the Sacred Heart of Jesus. It was formally approved as a national historic monument by the National Commission of Patrimony and Architecture on December 8, 2022.
+
+                    Sacré-Cœur Basilica is located at the summit of the butte of Montmartre. From its dome two hundred meters above the Seine, the basilica overlooks the entire city of Paris and its suburbs. It is the second most popular tourist destination in the capital after the Eiffel Tower.</b> </p>
+                <div class="profile">
+                <span  class="profile-name">Paris</span>
+                </div>
+               </div>
+               <!-------post5--------->
+               <div class="post-box Rome">
+                <img src="images/coloseum.jpg"      alt=""  class="post-img">
+                <h2 class="category">Rome,Italy</h2>
+                <a href="#" class="post-title">COLOSSEUM</a>
+                <span class="post-date">06 nov 2024</span>
+                <p class="post-descripition"><b> the Colosseum (/ˌkɒləˈsiːəm/ KOL-ə-SEE-əm; Italian: Colosseo [kolosˈsɛːo]) is an elliptical amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient amphitheatre ever built, and is still the largest standing amphitheatre in the world, despite its age. Construction began under the Emperor Vespasian (r. 69–79 AD) in 72[1] and was completed in AD 80 under his successor and heir, Titus (r. 79–81).[2] Further modifications were made during the reign of Domitian (r. 81–96).[3] The three emperors who were patrons of the work are known as the Flavian dynasty, and the amphitheatre was named the Flavian Amphitheatre (Latin: Amphitheatrum Flavium; Italian: Anfiteatro Flavio [aɱfiteˈaːtro ˈflaːvjo]) by later classicists and archaeologists for its association with their family name (Flavius).</b></p>
+                <div class="profile">
+                <span  class="profile-name">Rome</span>
+                </div>
+               </div>
+              <!--------post6------->
+               <div class="post-box Rome">
+                <img src="images/piazza.jpg"      alt=""  class="post-img">
+                <h2 class="category">Rome,Italy</h2>
+                <a href="#" class="post-title">PIAZZA NAVONA</a>
+                <span class="post-date">06 nov 2024</span>
+                <p class="post-descripition"><b> Piazza Navona is a public open space in Rome, Italy. It is built on the site of the 1st century AD Stadium of Domitian and follows the form of the open space of the stadium in an elongated oval.[1] The ancient Romans went there to watch the agones ("games"), and hence it was known as "Circus Agonalis" ("competition arena"). It is believed that over time the name changed to in avone to navone and eventually to navona.
+
+                    In the 17th century it became a showcase for Baroque design, with work by Bernini and Borromini among others. The Fountain Of Four Rivers stands in front of the Church of Sant'Agnese in Agone.</b></p>
+                <div class="profile">
+                <span  class="profile-name">Rome</span>
+                </div>
+               </div>
+               <!------post----7-->
+               <div class="post-box Rome">
+                <img src="images/roman.jpg"      alt=""  class="post-img">
+                <h2 class="category">Rome,Italy</h2>
+                <a href="#" class="post-title">ROMAN FOREUM</a>
+                <span class="post-date">06 nov 2024</span>
+                <p class="post-descripition"><b>The Roman Forum (Italian: Foro Romano), also known by its Latin name Forum Romanum, is a rectangular forum (plaza) surrounded by the ruins of several important ancient government buildings at the centre of the city of Rome. Citizens of the ancient city referred to this space, originally a marketplace, as the Forum Magnum, or simply the Forum.[2]
+
+                    For centuries, the Forum was the centre of day-to-day life in Rome: the site of triumphal processions and elections; the venue for public speeches, criminal trials and gladiatorial matches; and the nucleus of commercial affairs. Here statues and monuments commemorated the city's leaders. The heart of ancient Rome, it has been called the most celebrated meeting place in the world, and in all history. Located in the small valley between the Palatine and Capitoline Hills, the Forum today is a sprawling ruin of architectural fragments and intermittent archaeological excavations attracting 4.5 million or more sightseers yearly.</b></p>
+                    
+                    
+                <div class="profile">
+                <span  class="profile-name">Rome</span>
+                </div>
+               </div>
+               <!-------post8--------->
+               <div class="post-box Rome">
+                <img src="images/vatican.jpg"      alt=""  class="post-img">
+                <h2 class="category">Rome,Italy</h2>
+                <a href="#" class="post-title">VACTICAN MUSEUM</a>
+                <span class="post-date">06 nov 2024</span>
+                <p class="post-descripition"><b>The Vatican Museums (Italian: Musei Vaticani; Latin: Musea Vaticana) are the public museums of Vatican City, enclave of Rome. They display works from the immense collection amassed by the Catholic Church and the papacy throughout the centuries, including several of the most well-known Roman sculptures and most important masterpieces of Renaissance art in the world. The museums contain roughly 70,000 works, of which 20,000 are on display, and currently employs 640 people who work in 40 different administrative, scholarly, and restoration departments.
+
+                    Pope Julius II founded the museums in the early 16th century. The Sistine Chapel, with its ceiling and altar wall decorated by Michelangelo, and the Stanze di Raffaello (decorated by Raphael) are on the visitor route through the Vatican Museums.</b></p>
+                    
+                <div class="profile">
+                <span  class="profile-name">Rome</span>
+                </div>
+               </div>
+
+               <!-------post9---------->
+               <div class="post-box Tokyo">
+                <img src="images/senso-ji.jpg"      alt=""  class="post-img">
+                <h2 class="category">TOKYO,JAPAN</h2>
+                <a href="#" class="post-title">SENSO-JI</a>
+                <span class="post-date">06 nov 2024</span>
+                <p class="post-descripition"><b>Sensō-ji ( officially Kinryū-zan Sensō-ji, also known as Asakusa Kannon), is an ancient Buddhist temple in Asakusa, Tokyo, Japan. It is Tokyo's oldest-established temple, and one of its most significant. It is dedicated to Kannon, the bodhisattva of compassion. Structures in the temple complex include the main hall, a five-story pagoda and large gates. It is the most widely visited religious site in the world with over 30 million visitors annually.
+
+                    The temple was destroyed during a 10 March 1945 firebombing air raid on Tokyo during World War II. The main hall was rebuilt in the 1950s. Formerly associated with the Tendai sect of Buddhism, the temple became independent after the war. Leading to it is Nakamise-dōri street, containing many shops with traditional goods. Adjacent to the east of Sensō-ji is the Asakusa Shrine of the Shinto religion.</b></p>
+                <div class="profile">
+                <span  class="profile-name">Tokyo</span>
+                </div>
+               </div>
+               <!------post10-------->
+               <div class="post-box Tokyo">
+                <img src="images/market.jpg"      alt=""  class="post-img">
+                <h2 class="category">TOKYO,JAPAN</h2>
+                <a href="#" class="post-title">TSUJIKI OUTER MARKET</a>
+                <span class="post-date">06 nov 2024</span>
+                <p class="post-descripition"><b>Tsukiji Market is a major tourist attraction for both domestic and overseas visitors in Tokyo. Located in Tsukiji in central Tokyo between the Sumida River and the upmarket Ginza shopping district, the area contains retail markets, restaurants, and associated restaurant supply stores. Before 2018, it was the largest wholesale fish and seafood market in the world.The market opened on 11 February 1935 as a replacement for an older market that was destroyed in the 1923 Great Kantō earthquake. It was closed on 6 October 2018, with wholesale operations moving to the new Toyosu Market. The area where the old market was located was demolished and will be rebuilt into a new economic complex featuring a brand new stadium for the Yomiuri Giants of the Nippon Professional Baseball.</b></p>
+                <div class="profile">
+                <span  class="profile-name">Tokyo</span>
+                </div>
+               </div>
+               <!-----post11------->
+               <div class="post-box Tokyo">
+                <img src="images/disneyland.jpg"      alt=""  class="post-img">
+                <h2 class="category">TOKYO,JAPAN</h2>
+                <a href="#" class="post-title">TOKYO DISNEYLAND</a>
+                <span class="post-date">06 nov 2024</span>
+                <p class="post-descripition"><b>Tokyo Disneyland is a 115-acre (47 ha) theme park at the Tokyo Disney Resort in Urayasu, Chiba Prefecture, Japan, near Tokyo.Its main gate is directly adjacent to both Maihama Station and Tokyo Disneyland Station. It was the first Disney park to be built outside the United States and it opened on April 15, 1983. The park was constructed by WED Enterprises in the same style as Disneyland in California and Magic Kingdom in Florida. It is owned by The Oriental Land Company, which licenses intellectual property from The Walt Disney Company. Tokyo Disneyland and its companion park, Tokyo DisneySea, are the only Disney parks in the world not owned or operated by The Walt Disney Company in any capacity.</b></p>
+                <div class="profile">
+                <span  class="profile-name">Tokyo</span>
+                </div>
+               </div>
+               <!-------post12--------->
+               <div class="post-box Tokyo">
+                <img src="images/tokyoskytree.jpg"  class="post-img">
+                <h2 class="category">TOKYO,JAPAN</h2>
+                <a href="#" class="post-title">TOKYO SKYTREE</a>
+                <span class="post-date">06 nov 2024</span>
+                <p class="post-descripition"><b>Tokyo Skytree  is a broadcasting and observation tower, located in Sumida, Tokyo, Japan. It is the tallest tower in Japan since opened in 2012, and reached its full height of 634 meters (2,080 ft) in early 2011, making it the tallest tower in the world, displacing the Canton Tower,and the third tallest structure in the world (behind Merdeka 118 (678.9 m or 2,227 ft) and Burj Khalifa (829.8 m or 2,722 ft)).
+
+                    The tower is the primary television and radio broadcast site for the Kantō region; the older Tokyo Tower no longer gives complete digital terrestrial television broadcasting coverage because it is surrounded by high-rise buildings. Skytree was completed on Leap Day, 29 February 2012, with the tower opening to the public on 22 May 2012. The tower is the centrepiece of a large commercial development funded by Tobu Railway (which owns the complex) and a group of six terrestrial broadcasters headed by NHK. Trains stop at the adjacent Tokyo Skytree Station and nearby Oshiage Station. The complex is seven kilometres (4.3 miles) northeast of Tokyo Station. Sumida Aquarium is in the Tokyo Solamachi complex.</b></p>
+                <div class="profile">
+                <span  class="profile-name">Tokyo</span>
+                </div>
+               </div>
+               <!--------post13---------->
+               <div class="post-box Seoul">
+                <img src="images/tower.jpeg"  class="post-img">
+                <h2 class="category">SEOUL,KOREA</h2>
+                <a href="#" class="post-title">N SEOUL TOWER</a>
+                <span class="post-date">06 nov 2024</span>
+                <p class="post-descripition"><b>Many visitors ride the Namsan cable car up Namsan Mountain to walk to the tower. The tower is renowned as a national landmark and for its cityscape views. The 236.7-metre (777 ft) tower sits on the Namsan Mountain (243 metres or 797 feet). It attracts thousands of tourists and locals every year, especially during nighttime when the tower lights up. Photographers enjoy the panoramic view the tower offers. Each year, approximately 8.4 million visit the N Seoul Tower, which is surrounded by many other attractions South Korea offers, including Namsan Park and Namsangol Hanok Village. Visitors may go up the tower for a fee that differs for the following groups: children, elderly and teenagers, and adults. Rates also differ for packages and group size.
+
+                    In 2012, surveys conducted by Seoul City revealed foreign tourists ranked the N Seoul Tower as the number one tourist attraction.The N Seoul Tower is now also a symbol of Seoul.</b></p>
+                <div class="profile">
+                <span  class="profile-name">Seoul</span>
+                </div>
+               </div>
+               <!-----post14-------->
+               <div class="post-box Seoul">
+                <img src="images/bukchon hanok village.jpg"  class="post-img">
+                <h2 class="category">SEOUL,KOREA</h2>
+                <a href="#" class="post-title">BUKCHON HANOK VILLAGE</a>
+                <span class="post-date">06 nov 2024</span>
+                <p class="post-descripition"><b>The Bukchon Hanok Village is preserved in modern society and is renewed as a unique tourist sight. An alleyway of traditional houses lining the street is like time travel. In 1997, amid the movement of urbanization in Seoul, the Asian financial crisis occurred. Under huge financial damage, the Korean government resolved to preserve traditional hanok instead of removing them as old buildings. The movement for the preservation of hanok occurred in 2000. Close to tourist spots such as Gyeongbokgung Palace and Changgyeonggung Palace, Bukchon Hanok Village is an ideal place to learn about Korean traditional architecture and cultures. A poll of nearly 2,000 foreign visitors, conducted by the Seoul Metropolitan Government in November 2011, stated that exploring the narrow streets of Bukchon was their fourth favorite activity in Seoul.
+
+                    According to data by the Bukchon Traditional Culture Center, 30,000 people visited the area in 2007. However, after the village was featured in television programmes, such as 2 Days & 1 Night and Personal Taste, the number rose to 318,000 in 2010.[7] Between October 2016 and June 2017, the Tourism Research institute reported that an estimated 37,100 people visited during the week and 54,200 people visited on weekends.</b></p>
+                <div class="profile">
+                <span  class="profile-name">Seoul</span>
+                </div>
+               </div>
+               <!-------post15---------->
+               <div class="post-box Seoul">
+                <img src="images/gyeongkong palce.jpg"  class="post-img">
+                <h2 class="category">SEOUL,KOREA</h2>
+                <a href="#" class="post-title">GYEONGKNOG PALACE</a>
+                <span class="post-date">06 nov 2024</span>
+                <p class="post-descripition"><b>Gyeongbokgung (Korean: 경복궁; Hanja: 景福宮; lit. Blessing Scenery Palace), also known as Gyeongbokgung Palace, was the main royal palace of the Joseon dynasty. Built in 1395, it is located in northern Seoul, South Korea. The largest of the Five Grand Palaces built by the Joseon dynasty, Gyeongbokgung served as the home of the royal family and the seat of government.
+
+                    Gyeongbokgung continued to serve as the main palace of the Joseon dynasty until the premises were destroyed by fire during the Imjin War (1592–1598) and abandoned for two centuries. However, in the 19th century, all of the palace's 7,700 rooms were restored under the leadership of Prince Regent Heungseon during the reign of King Gojong. Some 500 buildings were restored on a site of over 40 hectares.The architectural principles of ancient Korea were incorporated into the tradition and appearance of the Joseon royal court.</b></p>
+                <div class="profile">
+                <span  class="profile-name">Seoul</span>
+                </div>
+               </div>
+               <!---------post16-------->
+               <div class="post-box Seoul">
+                <img src="images/lotte world.jpg"  class="post-img">
+                <h2 class="category">SEOUL,KOREA</h2>
+                <a href="#" class="post-title">LOTTE WORLD</a>
+                <span class="post-date">06 nov 2024</span>
+                <p class="post-descripition"><b>Lotte World or Lotte World Adventure (Korean: 롯데월드 어드벤처) is a major recreation complex in Seoul, South Korea. It consists of a large indoor theme park,an outdoor amusement park called "Magic Island", an artificial island on a lake linked by monorail, shopping malls, a luxury hotel, an observation tower, a Korean folk museum, sports facilities, and movie theaters. Opened in July 1989, Lotte World receives approximately 7.3 million visitors each year.[3] Lotte World's sister theme park, Lotte World Adventure Busan, opened in March 2022.
+                    Lotte World is located in Sincheon-dong, Songpa-gu, Seoul, South Korea. It is made up of two main sections, the outdoor amusement park Magic Island,[6] and Adventure (indoors).[7]
+
+Lotte World is open all year long, without any holiday closings. Its operating hours are from 10 am to 9 pm. Depending on weather conditions (below 0 °C or above 30 °C, wind speed over 7~14m2, rain over 0.2mm) some Magic Island attractions may be closed.
+                </b></p>
+                <div class="profile">
+                <span  class="profile-name">Seoul</span>
+                </div>
+               </div>
+
+
+
+
+
+
+               
+
+
+
+
+
+
+
+
+
+    </main>
+    <script>
+        function register() {
+            alert("Registration feature is coming soon!");
+        }
+    </script>
+</body>
+</html>

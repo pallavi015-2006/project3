@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staybnb - Online Package</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            text-decoration: none;
+            color: white;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        li {
+            margin: 0 15px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        a:hover, .active {
+            text-decoration: underline;
+        }
+        .register-btn {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .register-btn:hover {
+            background-color: #e68900;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .package-list {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .package {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+        .package:hover {
+            background-color: #e9e9e9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Staybnb</a>
+            <ul>
+                <li><a href="popularplaces.html">Popular Places</a></li>
+                <li><a href="traveloutside.html">Travel Outside</a></li>
+                <li><a href="onlinepackage.html" class="active">Online Package</a></li>
+            </ul>
+            <button class="register-btn" onclick="register()">Register now</button>
+        </nav>
+    </header>
+    <main>
+        <h1>Online Package</h1>
+        <p>Discover and book amazing online travel packages.</p>
+        <div class="package-list">
+            <div class="package" onclick="showDetails('Package 1: Beach Getaway')">Package 1: Beach Getaway</div>
+            <div class="package" onclick="showDetails('Package 2: Mountain Adventure')">Package 2: Mountain Adventure</div>
+            <div class="package" onclick="showDetails('Package 3: City Exploration')">Package 3: City Exploration</div>
+            <div class="package" onclick="showDetails('Package 4: Cultural Experience')">Package 4: Cultural Experience</div>
+            <div class="package" onclick="showDetails('Package 5: Safari Adventure')">Package 5: Safari Adventure</div>
+        </div>
+    </main>
+    <script>
+        function register() {
+            alert("Registration feature is coming soon!");
+        }
+
+        function showDetails(packageName) {
+            alert("You selected: " + packageName);
+        }
+    </script>
+</body>
+</html>
